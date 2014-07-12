@@ -89,8 +89,8 @@ public class Config {
 
 	/** パブリッシャー */
 	@Bean
-	@Scope("prototype")
-//	@Scope("singleton")
+	//	@Scope("prototype")
+	@Scope("singleton")
 	Runnable publisher() {
 		return () -> {
 			String time = LocalTime.now().toString();
